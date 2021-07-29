@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col-md-3 mb-5 animate__animated animate__fadeIn" *ngFor="let anime of animes">
+        <div class="div">
+            <img [src]="anime.attributes.posterImage.original" class="card-img-top rounded" style="height: 30rem;">
+        </div>
+
+        <div class="text-start">
+            <p class="fw-bold">{{anime.attributes.slug}}</p>
+        </div>
+        <div class="row">
+            <div class="col d-flex flex-row">
+                <i class="fas fa-child mt-1"></i>
+                <p class="ms-2">{{anime.attributes.ageRating}}</p>
+            </div>
+            <div class="col d-flex flex-row-reverse me-2">
+                <p class="ms-2">Episodes: <span class="text-danger">{{anime.attributes.episodeCount | noEpisodeCount}}</span></p>
+            </div>
+        </div>
+    </div>
+</div>
