@@ -1,1 +1,26 @@
-<p>navbar works!</p>
+<nav class="navbar navbar-expand-sm navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"><span class="brown-text fw-bold fst-italic">Vanime</span> </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExample03">
+            <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" routerLink="/home" routerLinkActive="active"><span class="brown-text">Popular anime</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" routerLink="/home" routerLinkActive="active"><span class="brown-text">Popular manga</span></a>
+                </li>
+            </ul>
+            <form>
+                <div class="d-flex flex-row align-items-center">
+                    <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                    <i class="fa fa-search fa-2x me-2 ms-2"></i>
+                </div>
+               
+            </form>
+        </div>
+    </div>
+</nav>
+<hr class="ms-3 me-3 mt-1">
