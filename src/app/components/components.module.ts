@@ -4,19 +4,23 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AnimesGridComponent } from './animes-grid/animes-grid.component';
 import { FooterComponent } from './footer/footer.component';
 import { PipesModule } from '../pipes/pipes.module';
+import { AppRoutingModule } from '../app-routing.module';
+import { CategorySlideshowComponent } from './category-slideshow/category-slideshow.component';
 
 
 
 @NgModule({
-  declarations: [NavbarComponent, AnimesGridComponent, FooterComponent],
+  declarations: [NavbarComponent, AnimesGridComponent, FooterComponent, CategorySlideshowComponent],
   imports: [
     CommonModule,
-    PipesModule
+    PipesModule,
+    AppRoutingModule
   ],
   exports: [
     NavbarComponent,
     AnimesGridComponent,
-    FooterComponent
+    FooterComponent,
+    CategorySlideshowComponent
   ]
 })
 export class ComponentsModule { }

@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class NoEpisodeCountPipe implements PipeTransform {
 
-  transform (episodeCount : number ): string {
+  transform ( episodeCount : number ): string {
     if ( !episodeCount ){
       return 'UNF';
     } else{

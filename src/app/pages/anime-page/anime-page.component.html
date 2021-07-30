@@ -1,0 +1,27 @@
+<div *ngIf="anime">
+    <div class="row">
+        <h3>{{anime.attributes.canonicalTitle}}</h3>
+    </div>
+    <div class="row mt-2">
+        <div class="col-4">
+            <div class="card bg-white rounded">
+                <div class="card-body dark-blue-text">
+                  <div class="d-flex flex-row align-items-center">
+                    <i class="fas fa-video me-2"></i>
+                    Categories
+                  </div>
+                  <div class="mt-2">
+                      <app-category-slideshow [categoria]="anime.relationships['categories']"></app-category-slideshow>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="col-8">
+            <div class="card bg-white rounded">
+                <div class="card-body dark-blue-text">
+                  lorem
+                </div>
+              </div>
+        </div>
+    </div>
+</div>

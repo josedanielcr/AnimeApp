@@ -14,6 +14,10 @@ body{
 /* #DEB992 */
 
 /* TEXT */
+.dark-blue-text{
+    color: #051622;
+}
+
 .brown-text{
     color: #DEB992;
 }

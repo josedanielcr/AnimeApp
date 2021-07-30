@@ -1,5 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
-import { Datum } from 'src/app/interfaces/anime-response';
+import { AnimeResponse, Datum } from 'src/app/interfaces/anime-response';
 import { AnimeService } from 'src/app/services/anime.service';
 
 @Component({
@@ -15,8 +15,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.animeService.GetMostPopularAnimes().subscribe((data) => {
-      this.animes = data;
-      console.log(this.animes);
+      this.animes = data;  
     });
   }
 
