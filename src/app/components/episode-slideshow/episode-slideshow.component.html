@@ -1,0 +1,13 @@
+<h3>Episodes</h3>
+<hr>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div *ngFor="let episode of episodes" class="swiper-slide">
+            <img [src]="episode.attributes.thumbnail.original" class="img-fluid rounded shadow img-episode">
+            <div class="d-flex flex-row">
+                <p>{{episode.attributes.canonicalTitle}}: </p>
+                <p class="text-danger ms-2">{{episode.attributes.number}}</p>
+            </div>
+        </div>
+    </div>
+</div>    

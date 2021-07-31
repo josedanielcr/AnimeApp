@@ -5,12 +5,12 @@ import { AnimesGridComponent } from './animes-grid/animes-grid.component';
 import { FooterComponent } from './footer/footer.component';
 import { PipesModule } from '../pipes/pipes.module';
 import { AppRoutingModule } from '../app-routing.module';
-import { CategorySlideshowComponent } from './category-slideshow/category-slideshow.component';
+import { EpisodeSlideshowComponent } from './episode-slideshow/episode-slideshow.component';
 
 
 
 @NgModule({
-  declarations: [NavbarComponent, AnimesGridComponent, FooterComponent, CategorySlideshowComponent],
+  declarations: [NavbarComponent, AnimesGridComponent, FooterComponent, EpisodeSlideshowComponent],
   imports: [
     CommonModule,
     PipesModule,
@@ -20,7 +20,7 @@ import { CategorySlideshowComponent } from './category-slideshow/category-slides
     NavbarComponent,
     AnimesGridComponent,
     FooterComponent,
-    CategorySlideshowComponent
+    EpisodeSlideshowComponent
   ]
 })
 export class ComponentsModule { }

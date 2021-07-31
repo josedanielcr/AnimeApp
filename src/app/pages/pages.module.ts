@@ -5,7 +5,6 @@ import { ComponentsModule } from '../components/components.module';
 import { AnimePageComponent } from './anime-page/anime-page.component';
 
 
-
 @NgModule({
   declarations: [HomeComponent, AnimePageComponent],
   imports: [

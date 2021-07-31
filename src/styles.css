@@ -34,3 +34,12 @@ body{
     background-color: #1BA098;
 }
 /* BACKGRONDS */
+
+/* BUTTONS */
+.green-button{
+    background-color: #1BA098;
+    color: white;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+/* BUTTONS */

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { combineLatest } from 'rxjs';
+import { Datum } from 'src/app/interfaces/category-response';
+import { DatumEpisode } from 'src/app/interfaces/episode-response';
 import { Data } from 'src/app/interfaces/single-anime-response';
 import { AnimeService } from 'src/app/services/anime.service';
 
@@ -11,6 +14,9 @@ import { AnimeService } from 'src/app/services/anime.service';
 export class AnimePageComponent implements OnInit {
 
   public anime : Data;
+  public categories : Datum[] = [];
+  public episodes : DatumEpisode[] = [];
+  public id : string;
 
   constructor( private activatedRoute : ActivatedRoute,
                private animeService : AnimeService ) { }
@@ -18,13 +24,15 @@ export class AnimePageComponent implements OnInit {
 
   ngOnInit(): void {
     const { id } = this.activatedRoute.snapshot.params;
-    this.animeService.GetAnime( id ).subscribe(
-      ( response ) => {
-        this.anime = response;
-        //TODO: Quitar este console log
-        console.log( this.anime );
-      }
-    )
+    combineLatest([ this.animeService.GetAnime( id ) , 
+                    this.animeService.GetAnimeCategory( id ),
+                    this.animeService.GetAnimeEpisodes( id )])
+      .subscribe( ([anime , categories, episodes ]) => {
+        this.anime = anime;
+        this.id = anime.id;
+        this.episodes = episodes;
+        this.categories = categories;
+      });
   }
 
 }
