@@ -1,5 +1,6 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { combineLatest } from 'rxjs';
 import { Datum } from 'src/app/interfaces/category-response';
 import { DatumEpisode } from 'src/app/interfaces/episode-response';
@@ -19,7 +20,9 @@ export class AnimePageComponent implements OnInit {
   public id : string;
 
   constructor( private activatedRoute : ActivatedRoute,
-               private animeService : AnimeService ) { }
+               private animeService : AnimeService,
+               private router : Router,
+               private location : Location ) { }
 
 
   ngOnInit(): void {
@@ -33,6 +36,11 @@ export class AnimePageComponent implements OnInit {
         this.episodes = episodes;
         this.categories = categories;
       });
+  }
+
+
+  goBack(){
+    this.location.back();
   }
 
 }

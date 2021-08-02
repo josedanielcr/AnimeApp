@@ -8,7 +8,10 @@ export class NoEpisodeCountPipe implements PipeTransform {
   transform ( episodeCount : number ): string {
     if ( !episodeCount ){
       return 'UNF';
-    } else{
+    } else if( episodeCount === 1 ){
+      return 'Movie';
+    }
+    else{
       return episodeCount.toString();
     }
   }

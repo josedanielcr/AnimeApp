@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
-import { Datum } from 'src/app/interfaces/episode-response';
+import { DatumEpisode } from 'src/app/interfaces/episode-response';
 import Swiper from 'swiper';
 import 'swiper/swiper-bundle.css';
 
@@ -10,7 +10,7 @@ import 'swiper/swiper-bundle.css';
 })
 export class EpisodeSlideshowComponent implements OnInit, AfterViewInit {
 
-  @Input() episodes : Datum[] = [];
+  @Input() episodes : DatumEpisode[] = [];
 
   constructor() { }
 

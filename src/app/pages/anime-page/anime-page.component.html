@@ -4,10 +4,10 @@
             <h2 class="mb-0">{{anime.attributes.canonicalTitle}}</h2>
         </div>
         <div class="col-2 d-flex flex-row-reverse">
-            <button class="btn green-button"><i class="fas fa-backward me-2"></i>Go back</button>
+            <button class="btn green-button" (click)="goBack()"><i class="fas fa-backward me-2"></i>Go back</button>
         </div>
     </div>
-    <div class="row mt-3">
+    <div class="row mt-3" *ngIf="anime.attributes.coverImage != null">
         <img [src]="anime.attributes.coverImage.large" class="img-fluid">
     </div>
     <div class="row mt-4">
@@ -49,3 +49,5 @@
         </div>
     </div>
 </div>
+
+

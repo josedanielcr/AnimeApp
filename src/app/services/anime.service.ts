@@ -44,4 +44,11 @@ export class AnimeService {
         map( ( episodes ) => episodes.data )
       )
   }
+
+  GetAnimeByName( name : string ){
+    return this.http.get<AnimeResponse>(`${ this.baseUrl }/?filter%5Btext%5D=${ name }`)
+      .pipe(
+        map( ( anime ) => anime.data )
+      )
+  }
 }

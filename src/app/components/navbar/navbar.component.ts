@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -8,9 +8,16 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor( private router : Router ) { }
 
   ngOnInit(): void {
+  }
+
+  searchAnime( animetxt : string ){
+    animetxt = animetxt.trim();
+    if( animetxt.length === 0){ return; }
+    this.router.navigate(['/search',animetxt]);
+    
   }
 
 }

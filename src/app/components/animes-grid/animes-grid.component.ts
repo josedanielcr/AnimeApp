@@ -16,5 +16,6 @@ export class AnimesGridComponent{
   moreInfoAnime( anime : Datum ){
     this.router.navigate([ '/anime', anime.id ]);
   }
+  
 
 }
