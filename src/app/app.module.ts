@@ -4,10 +4,12 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+
 // CUSTOM MODULES
 import { ComponentsModule } from './components/components.module';
 import { PagesModule } from './pages/pages.module';
 import { PipesModule } from './pipes/pipes.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { PipesModule } from './pipes/pipes.module';
     AppRoutingModule,
     ComponentsModule,
     PagesModule,
-    PipesModule
+    PipesModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,1 +1,4 @@
-<p>home works!</p>
+<h1 class="brown-text">Most popular animes</h1>
+<div *ngIf="animes.length > 0">
+    <app-animes-grid [animes]="animes"></app-animes-grid>
+</div>

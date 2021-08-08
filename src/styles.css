@@ -1,1 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    font-family: 'Raleway', sans-serif;
+    background-color: #051622;
+    color: white;
+}
+
+/* COLORS */
+/* dark blue */
+/* #051622 */
+/* green */
+/* #1BA098 */
+/* brown */
+/* #DEB992 */
+
+/* TEXT */
+.dark-blue-text{
+    color: #051622;
+}
+
+.brown-text{
+    color: #DEB992;
+}
+.green-text{
+    color: #1BA098;
+}
+/* TEXT */
+
+/* BACKGRONDS */
+.brown-bg{
+    background-color: #DEB992;
+}
+.green-bg{
+    background-color: #1BA098;
+}
+/* BACKGRONDS */
+
+/* BUTTONS */
+.green-button{
+    background-color: #1BA098;
+    color: white;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+/* BUTTONS */
